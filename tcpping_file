@@ -1,0 +1,20 @@
+                <stack name="tcp">
+                    <transport type="TCP" socket-binding="jgroups-tcp"/>
+                    <protocol type="TCPPING">
+                        <property name="initial_hosts">x.x.x.x[7600],y.y.y.y[7600]</property>
+                        <property name="port_range">10</property>
+                        <property name="timeout">3000</property>
+                        <property name="num_initial_members">2</property>
+                    </protocol>
+                    <!--<socket-protocol type="MPING" socket-binding="jgroups-mping"/>-->
+                    <protocol type="MERGE3"/>
+                    <socket-protocol type="FD_SOCK" socket-binding="jgroups-tcp-fd"/>
+                    <protocol type="FD_ALL"/>
+                    <protocol type="VERIFY_SUSPECT"/>
+                    <protocol type="pbcast.NAKACK2"/>
+                    <protocol type="UNICAST3"/>
+                    <protocol type="pbcast.STABLE"/>
+                    <protocol type="pbcast.GMS"/>
+                    <protocol type="MFC"/>
+                    <protocol type="FRAG3"/>
+                </stack>
