@@ -1,0 +1,1 @@
+# Keycloak-standalone-cluster
